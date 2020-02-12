@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wx">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 标识是否为一个xposed模块 -->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true"/>
+        <!-- xposed模块的描述信息 -->
+        <meta-data
+            android:name="xposeddescription"
+            android:value="get articles"/>
+        <!-- 支持xposed框架的最低版本 -->
+        <meta-data
+            android:name="xposedminversion"
+            android:value="53"/>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
